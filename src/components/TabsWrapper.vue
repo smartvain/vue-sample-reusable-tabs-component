@@ -2,7 +2,7 @@
 import { ref, useSlots } from 'vue'
 
 const slots = useSlots()
-console.log(slots.default().map(tab => tab.props.title))
+const tabTitles = slots.default!().map(tab => tab.props?.title)
 </script>
 
 <template>
